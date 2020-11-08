@@ -39,18 +39,23 @@ $("#currentDay").text(currentDays);
 
 
 // WHEN I click the save button for that time block
-
+//text for that event is saved in local storage
     $("button").on("click", function () {
-      
+
+
+
+
+
+        // for (var i = 0; i < localStorage.length; i++){
+        //     $('body').append(localStorage.getItem(localStorage.key(i)));
+        // }
     }) 
 
    
    
 
 
-// THEN the text for that event is saved in local storage
 
-    
 
 
 // WHEN I refresh the page
