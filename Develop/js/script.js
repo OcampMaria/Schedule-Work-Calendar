@@ -1,24 +1,56 @@
-let m = moment()
+var hours =  ['9', '10', '11', '12', '13', '14', '15', '16', '17']
+var storedValues = Array.apply(0, Array(24)).map(function(){return ''})
+var AMPM = ''
+var hourViewStored = Number(window.localStorage.getItem("hourView"))
+var SaveBtn = $(".saveBtn")
+
 var currentDays = moment().format("dddd, MMM Do YYYY");
-var hours =  ['8', '9', '10', '11', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-AMPM = ''
+let m = moment()
+
+// current day is displayed at the top of the calendar
+$("#currentDay").text(currentDays);
 
 
+// THEN each time block is color-coded to indicate whether it is in the past, present, or future
+
+                                 
+    function colorCode() {
+        //if present === .present
+        //if future === .future
+        //if past === .Past
+        var currentHour = moment().hour();
+        console.log(currentHour);
+
+        if ($("button").val() == currentHour) {
+            $("textarea").addClass("present")
+            console.log("present");
+        } 
+        else if ($("button").val()<= currentHour) {
+            $("textarea").addClass("Past")
+            console.log("past");
+        }
+        else if ($("button").val()>= currentHour) {
+            $("textarea").addClass("future")
+            console.log("future");
+        }
+    }
+
+    colorCode()
 
 
-// 
-//     WHEN I open the planner
-//     THEN the current day is displayed at the top of the calendar
+// WHEN I click the save button for that time block
 
-//     WHEN I scroll down
-//     THEN I am presented with time blocks for standard business hours
+    $("button").on("click", function () {
+      
+    }) 
 
-//     WHEN I view the time blocks for that day
-//     THEN each time block is color-coded to indicate whether it is in the past, present, or future
+   
+   
 
-//     WHEN I click into a time block
-//     THEN I can enter an event
-//     WHEN I click the save button for that time block
-//     THEN the text for that event is saved in local storage
-//     WHEN I refresh the page
-//     THEN the saved events persist -->
+
+// THEN the text for that event is saved in local storage
+
+    
+
+
+// WHEN I refresh the page
