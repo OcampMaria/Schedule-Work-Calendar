@@ -15,11 +15,9 @@ $("#currentDay").text(currentDays);
 
 // each time block is color-coded to indicate whether it is in the past, present, or future.    
 
-// var button = $("button")
-
 $(".row").each(function(){
-    
-var value = $(this).val()
+
+    var value = parseInt($(this).val())
 
     if (value == hour ) {
         $("textarea").addClass("present")
@@ -31,7 +29,7 @@ var value = $(this).val()
     }
     else if (value > hour) {
         $("textarea").addClass("future")
-        console.log("#number");
+        console.log("future");
     }
 })
 
