@@ -1,7 +1,7 @@
 # Schedule-Work-Calendar: Daily View
 
 <p> 
-The styling of the work scheduler was already included in the application's code. The application was not functional, and there was not an existing Html code. [Moment.js](https://momentjs.com/) library was used to work with dates and times. The app runs in the browser and features dynamically updated HTML and CSS powered by jQuery. The calendar application which allows a user to save events for each hour of the day. 
+The styling of the work scheduler daily agenda was already included in the application's code. The application was not functional, and there was not an existing Html code. The application runs in the browser and features dynamically updated HTML and CSS powered by jQuery. The calendar application allows a user to save events for each hour of the day in the local storage which allows to maintain the information on the application even after web page reload. 
 
 </p>
 
@@ -10,13 +10,12 @@ Visual Studio Code was used to add JavaScript and HTML code to finish the applic
 </p>
 
 <p>
-When completing this application, some of the challenges that appeared included, 
+When completing this application, some of the challenges that appeared included, difficulties when working wiht the moment library. At the begining, I was not able to access the library. After adding the moment.min.js file, I was able to use the library and its contents. Moreover, I was having trouble while working with the color coding code to make the application's change color depending on the hour of the day. And finally being able to to save the user input inside local storag
 
 </p>
 
 <p>
-By working on this application, I learned. 
-
+By working on this application, I learned how to use outside libraries such as "moment" to use their content insise of my code and working more efficiently. I also learned how to loop through the entirely of a div to target more than one line of code at the same time with the (.each) function. 
 </p>
 
 ## Installation
