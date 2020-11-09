@@ -15,46 +15,25 @@ $("#currentDay").text(currentDays);
 
 // each time block is color-coded to indicate whether it is in the past, present, or future.    
 
+// var button = $("button")
 
+$(".row").each(function(){
+    
+var value = $(this).val()
 
-    function colorCode() {
-        //if present === .present red
-        //if future === .future green
-        //if past === .Past gray
-      
-        
-
-        if ($("button").val() == hour ) {
-            $("textarea").addClass("present")
-            console.log("present");
-        } 
-        else if ($("button").val() <= hour) {
-            $("textarea").addClass("Past")
-            console.log("past");
-        }
-        else if ($("button").val() > hour) {
-            $("textarea").addClass("future")
-            console.log("#number");
-        }
+    if (value == hour ) {
+        $("textarea").addClass("present")
+        console.log("present");
+    } 
+    else if (value <= hour) {
+        $("textarea").addClass("Past")
+        console.log("past");
     }
-
-    colorCode()
-
-
-// WHEN I click the save button for that time block
-//text for that event is saved in local storage
-    $("button").on("click", function () {
-       var content =  $("textarea").val()
-    
-        localStorage.setItem ("mycontent", content)
-
-    }) 
-
-    
-   
+    else if (value > hour) {
+        $("textarea").addClass("future")
+        console.log("#number");
+    }
+})
 
 
-
-
-
-// WHEN I refresh the page
+  
