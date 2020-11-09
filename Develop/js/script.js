@@ -2,7 +2,7 @@ var hourViewStored = Number(window.localStorage.getItem("hourView"))
 var SaveBtn = $(".saveBtn")
 
 var currentDays = moment().format("dddd, MMM Do YYYY");
-var currentHour = moment().format("h:00 a")
+var currentHour = moment().format("h")
 var hour = moment().hour()
 let m = moment()
 
@@ -17,21 +17,38 @@ $("#currentDay").text(currentDays);
 
 $(".row").each(function(){
 
-    var value = parseInt($(this).val())
-
-    if (value == hour ) {
+    var value = parseInt($(this).val());
+    console.log(value);
+  
+    
+    if (value == hour) {
         $("textarea").addClass("present")
         console.log("present");
     } 
     else if (value <= hour) {
         $("textarea").addClass("Past")
+       
         console.log("past");
     }
-    else if (value > hour) {
+    else if (value >= hour) {
         $("textarea").addClass("future")
+     
         console.log("future");
     }
+
 })
 
 
-  
+
+$( ".btn" ).on( "click", function() {
+    $("textarea").each(function(){
+
+        localStorage.setItem("text", $("textarea").text);
+        
+    })
+       
+});
+
+
+
+console.log(localStorage);
