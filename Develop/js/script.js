@@ -1,3 +1,4 @@
+var hourArray = ["9","10","11","12","13","14","15","16","17"]
 var hourViewStored = Number(window.localStorage.getItem("hourView"))
 var SaveBtn = $(".saveBtn")
 
@@ -17,38 +18,41 @@ $("#currentDay").text(currentDays);
 
 $(".row").each(function(){
 
-    var value = parseInt($(this).val());
-    console.log(value);
-  
+
+    var value = parseInt($(this).attr("id"));
+   console.log(value);
     
-    if (value == hour) {
-        $("textarea").addClass("present")
-        console.log("present");
+    if (value === hour) {
+        $(this).addClass("present")
+      
     } 
     else if (value <= hour) {
-        $("textarea").addClass("Past")
+        $(this).addClass("Past")
        
-        console.log("past");
     }
     else if (value >= hour) {
-        $("textarea").addClass("future")
+        $(this).addClass("future")
      
-        console.log("future");
     }
-
+ 
 })
 
 
 
-$( ".btn" ).on( "click", function() {
-    $("textarea").each(function(){
+$(".saveBtn" ).on( "click", function() {
+    var textInput = $(this).siblings(".description").val();
+    var hour = $(this).parent().attr("id");
+    console.log(textInput, hour);
 
-        localStorage.setItem("text", $("textarea").text);
-        
-    })
-       
+    localStorage.setItem(hour, textInput)
 });
 
+function getItems() {
+    for (var i=0; i<hourArray.length; i++){
+        $(`#${hourArray[i]} .description`).val(localStorage.getItem(hourArray[i]))
+    }
+}
 
 
-console.log(localStorage);
+getItems()
+

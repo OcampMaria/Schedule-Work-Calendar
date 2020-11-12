@@ -10,7 +10,7 @@ Visual Studio Code was used to add JavaScript and HTML code to finish the applic
 </p>
 
 <p>
-When completing this application, some of the challenges that appeared included, difficulties when working wiht the moment library. At the begining, I was not able to access the library. After adding the moment.min.js file, I was able to use the library and its contents. Moreover, I was having trouble while working with the color coding code to make the application's change color depending on the hour of the day. And finally being able to to save the user input inside local storag
+When completing this application, some of the challenges that appeared included, difficulties when working wiht the moment library. At the begining, I was not able to access the library. After adding the moment.min.js file, I was able to use the library and its contents. Moreover, I was having trouble while working with the color coding code to make the application's change color depending on the hour of the day. And finally being able to to save the user input inside local storage.
 
 </p>
 
